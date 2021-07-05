@@ -32,8 +32,8 @@ FRAMES_TO_SKIP = 10
 
 #------------------------ IOT-HUB INITIALIZATION -------------------- #
 RECIEVE_C2D_MESSAGES = True
-CONNECTION_STRING = "HostName=IoTHWLabs.azure-devices.net;DeviceId=edge-test-device;SharedAccessKey=yOlOAk/OBHLX3Ty2cwGxJ1+KxGxc+uTqKBMTgqotorg="
-DEVICE_ID = "edge-test-device"
+CONNECTION_STRING = os.getenv("cs")
+DEVICE_ID = os.getenv("id")
 SEND_COUNTER_TO_IOT_HUB = True
 TEXT_TO_SEND = ""
 SEND_AFTER_FRAMES = 30*0 # After 4 seconds
@@ -182,7 +182,7 @@ def start_camera_source():
 
 def send_to_iot_hub():
 
-    CONNECTION_STRING = "HostName=IoTHWLabs.azure-devices.net;DeviceId=edge-test-device;SharedAccessKey=yOlOAk/OBHLX3Ty2cwGxJ1+KxGxc+uTqKBMTgqotorg="
+    CONNECTION_STRING = os.getenv("cs")
     CLIENT = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING)
     while True:
         try:
@@ -198,7 +198,7 @@ def send_to_iot_hub():
 
 def recieve_from_cloud():
 
-    CONNECTION_STRING = "HostName=IoTHWLabs.azure-devices.net;DeviceId=edge-test-device;SharedAccessKey=yOlOAk/OBHLX3Ty2cwGxJ1+KxGxc+uTqKBMTgqotorg="
+    CONNECTION_STRING = os.getenv("cs")
     CLIENT = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING)
 
     while True:

@@ -1,3 +1,6 @@
+## Wait for registrations status of device...
+import listen_status 
+listen_status.main()
 import cv2
 import time
 import json

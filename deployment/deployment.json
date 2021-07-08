@@ -3,20 +3,35 @@
         "$edgeAgent": {
             "properties.desired": {
                 "modules": {
-                    "pplcountSSD": {
+                    "peoplecountSSD": {
                         "settings": {
-                            "image": "sherazfaisal/testdm:vfinal",
+                            "image": "iotcontlabs.azurecr.io/peoplecount:algo",
                             "createOptions": ""
                         },
                         "type": "docker",
                         "version": "1.0",
+                        "env": {
+                            "cs": {
+                                "value": "HostName=IoTHWLabs.azure-devices.net;DeviceId=b827eb6fce4e;SharedAccessKey=9+q5mnl79Rcrc/rvvPuoJ5TFWfo7OK2mEtSTFPrwzL4="
+                            },
+                            "id": {
+                                "value": "b827eb6fce4e"
+                            }
+                        },
                         "status": "running",
                         "restartPolicy": "always"
                     }
                 },
                 "runtime": {
                     "settings": {
-                        "minDockerVersion": "v1.25"
+                        "minDockerVersion": "v1.25",
+                        "registryCredentials": {
+                            "peoplecountSSD": {
+                                "address": "iotcontlabs.azurecr.io",
+                                "password": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVERFE6SFVYWDpMQzQ3OlpCUk06T0k0WTpPUjY2OkFVWko6Qlk3RTo3N0pWOjU0UlI6UU1BSzpOTDI1In0.eyJqdGkiOiJkYTYwM2ExYi0wNzM2LTQ5N2ItOTc2MC1kM2MxYTViODVlNmMiLCJzdWIiOiJ3YXFhcy5raGFuQGh5cGVybnltYml6LmNvbSIsIm5iZiI6MTYyNTY1MzQ4MiwiZXhwIjoxNjI1NjY1MTgyLCJpYXQiOjE2MjU2NTM0ODIsImlzcyI6IkF6dXJlIENvbnRhaW5lciBSZWdpc3RyeSIsImF1ZCI6ImlvdGNvbnRsYWJzLmF6dXJlY3IuaW8iLCJ2ZXJzaW9uIjoiMS4wIiwicmlkIjoiODJmMzg4NDczOTk2NGRkMWJmMTQ1ZjRmMmYzZTlkZTEiLCJncmFudF90eXBlIjoicmVmcmVzaF90b2tlbiIsImFwcGlkIjoiMDRiMDc3OTUtOGRkYi00NjFhLWJiZWUtMDJmOWUxYmY3YjQ2IiwidGVuYW50IjoiYWIyZGFlY2YtNjU1YS00OTI0LWI1ODktMDI5MTBkMGIzMWQ0IiwicGVybWlzc2lvbnMiOnsiYWN0aW9ucyI6WyJyZWFkIiwid3JpdGUiLCJkZWxldGUiXSwibm90QWN0aW9ucyI6bnVsbH0sInJvbGVzIjpbXX0.XzAhtHfQlPOzbTXC4goXuwORrEO1ZWDGs11_Z7cn6D2iLDfCz144wmdyrHiUuMaIw9-H2ZXiYrlhKOJyUbSg053iljcesjYf2qsg40AY-rxHE8Xqkhn2m7nFdJaFUAQBj0EZQZMBkXgnJ-rLQ4Tj266bSk-Pc1EWcXVpUEC_sADmrOaYJw-4j3KXn_vdX9e5KXhOE7l0erP1rmBx7_4U0XGhRWkh1Wxsez5kbIr-SYqMrHaH_Q591ArTYdG-R-cNhCe0y_5PQgqDcS_HpFfBWXhn8qdXx5I9ML94aSruYaZEBBWSjSXfa2MQFlMKy1lcDiwu8OKI3cv0w1tP-g3xXw",
+                                "username": "00000000-0000-0000-0000-000000000000"
+                            }
+                        }
                     },
                     "type": "docker"
                 },
@@ -52,7 +67,7 @@
                 }
             }
         },
-        "pplcountSSD": {
+        "peoplecountSSD": {
             "properties.desired": {}
         }
     }

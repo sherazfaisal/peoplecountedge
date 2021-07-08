@@ -1,0 +1,7 @@
+FROM arm64v8/ubuntu
+
+# Install dependencies
+
+COPY reg.py .
+
+CMD ["cat", "-u", "reg.py"]

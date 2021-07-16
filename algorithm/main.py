@@ -5,6 +5,7 @@ import imutils
 import os
 import numpy as np
 import datetime
+import os 
 import threading
 from six.moves import input
 from azure.iot.device import IoTHubDeviceClient, Message

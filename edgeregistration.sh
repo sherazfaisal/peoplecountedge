@@ -42,5 +42,4 @@ sudo docker pull metisedgedevice/peoplecount:reg_sh
 sudo docker run metisedgedevice/peoplecount:reg_sh >> reg.sh
 sudo docker pull metisedgedevice/peoplecount:reg_wifi_listen_py
 sudo docker run metisedgedevice/peoplecount:reg_wifi_listen_py >>reg.py
-sudo python3 listen_wifi.py
 exit 0

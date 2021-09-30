@@ -1,0 +1,35 @@
+"systemModules": {
+    "edgeAgent": {
+        "settings": {
+            "image": "mcr.microsoft.com/azureiotedge-agent:1.1",
+            "createOptions": {
+                "HostConfig": {
+                    "Binds":["/dev/:."]
+                }
+            }
+        },
+        "type": "docker",
+        "env": {
+            "storageFolder": {
+                "value": "."
+            }
+        }
+    },
+    "edgeHub": {
+        "settings": {
+            "image": "mcr.microsoft.com/azureiotedge-hub:1.1",
+            "createOptions": {
+                "HostConfig": {
+                    "Binds":["<HostStoragePath>:<ModuleStoragePath>"],
+                    "PortBindings":{"5671/tcp":[{"HostPort":"5671"}],"8883/tcp":[{"HostPort":"8883"}],"443/tcp":[{"HostPort":"443"}]}}}
+        },
+        "type": "docker",
+        "env": {
+            "storageFolder": {
+                "value": "."
+            }
+        },
+        "status": "running",
+        "restartPolicy": "always"
+    }
+}s

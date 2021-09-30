@@ -27,9 +27,9 @@ rm /etc/aziot/config.toml
 rm reg.py
 rm reg.sh
 sudo docker login -u metisedgedevice -p Hypernym@ISB
-sudo docker pull metisedgedevice/peoplecount:reg_py >> reg.py
+sudo docker pull metisedgedevice/peoplecount:reg_py 
 sudo docker run metisedgedevice/peoplecount:reg_py >> reg.py
-sudo docker pull metisedgedevice/peoplecount:reg_sh >> reg.sh
+sudo docker pull metisedgedevice/peoplecount:reg_sh 
 sudo docker run metisedgedevice/peoplecount:reg_sh >> reg.sh
 python3 reg.py >> config.txt
 sudo cp config.txt /etc/aziot/config.toml

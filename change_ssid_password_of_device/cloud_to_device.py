@@ -1,7 +1,7 @@
 from azure.iot.hub import IoTHubRegistryManager
 
-CONNECTION_STRING = "HostName=IoTHWLabs.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=lp5GJ78EcbwUWcwi5Z5McEGdE4lpHZIReZOVdqnzLjQ="
-DEVICE_ID = "b827eb6fce4e" ## Change device id for different devices
+CONNECTION_STRING = "<CONNECTION STRING OF IOT-HUB>"
+DEVICE_ID = "<DEVICE ID OR MAC ADDRESS>" ## Change device id for different devices
 
 def iothub_send_c2d(value):
     try:

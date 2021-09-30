@@ -1,0 +1,75 @@
+{
+    "apiVersion": "1.0",
+    "operations": [
+        {
+            "opName": "pipelineTopologyList",
+            "opParams": {}
+        },
+        {
+            "opName": "livePipelineList",
+            "opParams": {}
+        },
+        {
+            "opName": "pipelineTopologySet",
+            "opParams": {
+                "pipelineTopologyFile": "topology.json"
+            }
+        },
+        {
+            "opName": "livePipelineSet",
+            "opParams": {
+                "name": "e45f0121a9fc-event-based-Test",
+                "properties": {
+                    "topologyName": "e45f0121a9fc-event-based-Test",
+                    "description": "Sample pipeline description",
+                    "parameters": [
+                        {
+                            "name": "rtspUrl",
+                            "value": "rtsp://192.168.137.47:1935/"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "opName": "livePipelineActivate",
+            "opParams": {
+                "name": "e45f0121a9fc-event-based-Test"
+            }
+        },
+        {
+            "opName": "livePipelineList",
+            "opParams": {}
+        },
+        {
+            "opName": "livePipelineList",
+            "opParams": {}
+        },
+        {
+            "opName": "livePipelineDeactivate",
+            "opParams": {
+                "name": "e45f0121a9fc-event-based-Test"
+            }
+        },
+        {
+            "opName": "livePipelineDelete",
+            "opParams": {
+                "name": "e45f0121a9fc-event-based-Test"
+            }
+        },
+        {
+            "opName": "livePipelineList",
+            "opParams": {}
+        },
+        {
+            "opName": "pipelineTopologyDelete",
+            "opParams": {
+                "name": "e45f0121a9fc-event-based-Test"
+            }
+        },
+        {
+            "opName": "pipelineTopologyList",
+            "opParams": {}
+        }
+    ]
+}

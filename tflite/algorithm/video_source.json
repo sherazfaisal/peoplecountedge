@@ -1,0 +1,10 @@
+{
+    "source": "0",
+    "zone": "4secondAnalysis",
+    "ngrok_streaming": "False",
+    "name_livestream": "Test",
+    "livestream": "True",
+    "livestream_url": "rtsp://192.168.137.47:1935/",
+    "event-based": "True",
+    "event-based_url": "rtsp://192.168.137.47:1935/"
+}
